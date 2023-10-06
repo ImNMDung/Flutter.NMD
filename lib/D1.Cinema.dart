@@ -7,7 +7,7 @@ class MyCinema extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Cinema",
           style: TextStyle(
             color: Colors.white,
@@ -36,11 +36,11 @@ class MyCinema extends StatelessWidget {
             int index1 = pagePosition % textPaths.length;
             int index = pagePosition % imagePaths.length;
             return Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(bottom: 5),
+                    padding: const EdgeInsets.only(bottom: 5),
                     child: Image.asset(
                       imagePaths[index],
                       width: 300,
@@ -48,9 +48,9 @@ class MyCinema extends StatelessWidget {
                   ),
                   Text(
                     textPaths[index1],
-                    style: TextStyle(
-                      fontSize: 16, // Đặt kích thước chữ
-                      fontWeight: FontWeight.bold, // Đặt độ đậm của chữ
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
