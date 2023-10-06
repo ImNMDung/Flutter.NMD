@@ -1,16 +1,11 @@
-# flutter_application_2
+# Lập trình ứng dụng cho các thiết bị di động - Nhóm 2
 
-A new Flutter project.
+Flutter project.
 
-## Getting Started
+Nguyễn Mạnh Dũng
+20T1080029@husc.edu.vn
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+File nộp :  Flutter.NMD/lib
+                MyClassroom : D1.Myclassroom.dart
+                Slider : D1.MyCinema.dart
