@@ -8,14 +8,12 @@ class MyCinema extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Cinema", // Tiêu đề của thanh AppBar
+          "Cinema",
           style: TextStyle(
-            // Các thuộc tính về kiểu chữ của tiêu đề
             color: Colors.white,
-            // Đặt màu chữ
           ),
         ),
-        backgroundColor: Colors.blue, // Đặt màu nền cho AppBar
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         child: PageView.builder(
@@ -26,13 +24,13 @@ class MyCinema extends StatelessWidget {
             List<String> imagePaths = [
               "assets/images/anh-duong-sau-hoang-hon.jpg",
               "assets/images/nhan-duyen-tien-dinh1.jpg",
-              "assets/images/the-nun-ii.jpg", // Thêm đường dẫn của ảnh khác ở đây
+              "assets/images/the-nun-ii.jpg",
             ];
 
             List<String> textPaths = [
               "Ánh Dương Sau Hoàng Hôn",
               "Nhân Duyên Tiền Đình",
-              "The Nun II", // Thêm đường dẫn của ảnh khác ở đây
+              "The Nun II",
             ];
 
             int index1 = pagePosition % textPaths.length;
@@ -42,8 +40,7 @@ class MyCinema extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(
-                        bottom: 5), // Khoảng cách 5 pixels giữa ảnh và văn bản
+                    padding: EdgeInsets.only(bottom: 5),
                     child: Image.asset(
                       imagePaths[index],
                       width: 300,
