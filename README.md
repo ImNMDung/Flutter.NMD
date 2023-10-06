@@ -2,10 +2,10 @@
 
 Flutter project.
 
-Nguyễn Mạnh Dũng
-20T1080029@husc.edu.vn
+Nguyễn Mạnh Dũng <br/>
+20T1080029@husc.edu.vn <br/>
 
 
-File nộp :  Flutter.NMD/lib
-                MyClassroom : D1.Myclassroom.dart
-                Slider : D1.MyCinema.dart
+File nộp :  Flutter.NMD/lib <br/>
+                MyClassroom : D1.Myclassroom.dart <br/>
+                Slider : D1.MyCinema.dart <br/>
