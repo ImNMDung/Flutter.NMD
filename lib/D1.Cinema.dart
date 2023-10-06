@@ -18,23 +18,50 @@ class MyCinema extends StatelessWidget {
         backgroundColor: Colors.blue, // Đặt màu nền cho AppBar
       ),
       body: Container(
-          child: ListView.builder(
-        scrollDirection: Axis.horizontal, // Đặt hướng cuộn là ngang
-        itemCount: 10, // Số lượng ảnh
-        itemBuilder: (BuildContext context, int index) {
-          // Thay đổi đường dẫn hình ảnh tại đây
-          String imagePath = 'assets/images/64a6e849233df607607280.jpeg';
+        child: PageView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 9,
+          pageSnapping: true,
+          itemBuilder: (context, pagePosition) {
+            List<String> imagePaths = [
+              "assets/images/anh-duong-sau-hoang-hon.jpg",
+              "assets/images/nhan-duyen-tien-dinh1.jpg",
+              "assets/images/the-nun-ii.jpg", // Thêm đường dẫn của ảnh khác ở đây
+            ];
 
-          return Padding(
-            padding: EdgeInsets.all(8.0), // Khoảng cách giữa các ảnh
-            child: Image.asset(
-              imagePath,
-              width: 200.0, // Độ rộng ảnh (thay đổi theo nhu cầu)
-              height: 200.0, // Chiều cao ảnh (thay đổi theo nhu cầu)
-            ),
-          );
-        },
-      )),
+            List<String> textPaths = [
+              "Ánh Dương Sau Hoàng Hôn",
+              "Nhân Duyên Tiền Đình",
+              "The Nun II", // Thêm đường dẫn của ảnh khác ở đây
+            ];
+
+            int index1 = pagePosition % textPaths.length;
+            int index = pagePosition % imagePaths.length;
+            return Container(
+              margin: EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                        bottom: 5), // Khoảng cách 5 pixels giữa ảnh và văn bản
+                    child: Image.asset(
+                      imagePaths[index],
+                      width: 300,
+                    ),
+                  ),
+                  Text(
+                    textPaths[index1],
+                    style: TextStyle(
+                      fontSize: 16, // Đặt kích thước chữ
+                      fontWeight: FontWeight.bold, // Đặt độ đậm của chữ
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
